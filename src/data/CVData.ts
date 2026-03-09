@@ -19,3 +19,5 @@ export const masInformacion = [
   "Carnet de conducir tipo B",
   "Vehículo propio"
 ]
+
+export const resumen = "Como estudiante de Desarrollo de Aplicaciones Web (DAW, FPII), complemento mi formación técnica con una sólida trayectoria como contable administrativo, donde he desarrollado una gran capacidad analítica, atención al detalle y gestión eficiente de procesos. Mi objetivo es seguir creciendo profesionalmente y aportar valor mediante la mejora de procesos y la participación en proyectos donde la tecnología y la gestión se integren para ofrecer resultados fiables, eficientes y alineados con las necesidades de la organización."

@@ -6,36 +6,40 @@ import ExperienciasLaborales from "../components/ExperienciasLaborales.astro";
 import Contactos from "../components/Contactos.astro";
 import CVSection from "../components/CVSection.astro";
 import {
-    conocimientosTecnicos,
-    actitudes,
-    masInformacion,
+  resumen,
+  conocimientosTecnicos,
+  actitudes,
+  masInformacion,
 } from "../data/CVData";
 import imgCV from "../assets/imgCV.jpeg";
 ---
 
 <Layout title="Curriculum Amanda Cruz">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 mt-10 mb-10 p-6">
-        <main class="">
-            <HeaderResumen />
-            <Estudios />
-            <ExperienciasLaborales />
-        </main>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 mt-10 mb-10 p-6">
+    
+    <header class="order-1 md:order-1 md:col-start-1 md:row-start-1">
+      <HeaderResumen />
+    </header>
 
-        <aside class="bg-rose-50 p-6 rounded-xl space-y-6">
-            <section class="mb-5 mt-5 ml-33">
-                <img
-                    src={imgCV.src}
-                    alt="Foto Amanda"
-                    class="w-36 h-36 rounded-full object-cover shadow"
-                />
-            </section>
-            <Contactos />
-            <CVSection
-                titulo="Conocimientos técnicos"
-                items={conocimientosTecnicos}
-            />
-            <CVSection titulo="Actitudes" items={actitudes} />
-            <CVSection titulo="Más información" items={masInformacion} />
-        </aside>
-    </div>
+    <aside class="order-2 md:order-2 md:col-start-2 md:row-start-1 md:row-span-2 bg-rose-50 p-6 rounded-xl space-y-6">
+      <section class="flex justify-center mb-5 mt-5">
+        <img
+          src={imgCV.src}
+          alt="Foto Amanda"
+          class="w-36 h-36 rounded-full object-cover shadow"
+        />
+      </section>
+
+      <Contactos />
+      <CVSection titulo="Conocimientos técnicos" items={conocimientosTecnicos} />
+      <CVSection titulo="Actitudes" items={actitudes} />
+      <CVSection titulo="Más información" items={masInformacion} />
+    </aside>
+
+    <main class="order-3 md:order-3 md:col-start-1 md:row-start-2">
+      <CVSection titulo="Resumen" items={[resumen]} />
+      <Estudios />
+      <ExperienciasLaborales />
+    </main>
+  </div>
 </Layout>

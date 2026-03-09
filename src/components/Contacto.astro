@@ -92,10 +92,12 @@ const { telefono, email, linkedin, github, direccion } = Astro.props;
                     fill="#0F0F0F"></path>
             </g></svg
         >
-        <strong>Linkedin:</strong>
-        <a class ="break-word" href={linkedin} target="_blank">
-            {linkedin}
-        </a>
+        <span class="min-w-0">
+            <strong>Linkedin:</strong>
+            <a class="break-words" href={linkedin} target="_blank">
+                {linkedin}
+            </a>
+        </span>
     </p>
     <p class="flex items-center gap-2">
         <svg
